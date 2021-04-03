@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
 	let data = await ytdl.getInfo(id)
 	let details = data.videoDetails
 	delete details.availableCountries
-	let formats = ytdl.chooseFormat(data.formats, {quality, filter, formats})
+	let formats = ytdl.chooseFormat(data.formats, {quality, filter, format})
 	data = {
 		details: data.videoDetails,
 		formats: formats
