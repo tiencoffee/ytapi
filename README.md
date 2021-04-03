@@ -11,7 +11,7 @@
 - Tham số bắt buộc:
 	- `id`: ID của video Youtube xác định
 - Tham số tùy chọn: Xem các tham số trong hàm [chooseFormat](https://github.com/fent/node-ytdl-core#ytdlchooseformatformats-options)
->	Nếu sử dụng tham số tùy chọn, thuộc tính `formats` trong kết quả trả về sẽ là một `Object` thay vì `Array`
+> Nếu sử dụng tham số tùy chọn, thuộc tính `formats` trong kết quả trả về sẽ là một `Object` thay vì `Array`
 
 ## Giấy phép
 
