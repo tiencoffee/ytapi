@@ -4,9 +4,11 @@ module.exports = async (req, res) => {
 	const {id, quality, filter, format} = req.query
 	try {
 		let data = await ytdl.getInfo(id)
-		let details = data.videoDetails
+		let {videoDetails: details, formats} = data
 		delete details.availableCountries
-		let formats = ytdl.chooseFormat(data.formats, {quality, filter, format})
+		if (quality || filter || format) {
+			formats = ytdl.chooseFormat(data.formats, {quality, filter, format})
+		}
 		data = {
 			details: data.videoDetails,
 			formats: formats
