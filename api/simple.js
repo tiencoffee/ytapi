@@ -5,7 +5,6 @@ module.exports = async (req, res) => {
 	try {
 		let data = await ytdl.getInfo(id)
 		let {videoDetails: details, formats} = data
-		delete details.availableCountries
 		if (quality || filter || format) {
 			formats = ytdl.chooseFormat(data.formats, {quality, filter, format})
 		}
