@@ -1,0 +1,9 @@
+{
+	"name": "ytapi",
+	"version": "0.1.0",
+	"author": "tiencoffee",
+	"license": "ISC",
+	"dependencies": {
+		"ytdl-core": ""
+	}
+}
